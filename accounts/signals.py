@@ -28,8 +28,8 @@ def handle_knowledge_save(sender, instance, **kwargs):
         {
             "type": "send_message",
             "skip_summary_update": instance._skip_summary_update,
-            "data": type('TmpSerializer', (serializers.ModelSerializer,),
-                         {'Meta': type('Meta', (), {'model': Knowledge, 'fields': '__all__'})})(instance).data
+            "data": [type('TmpSerializer', (serializers.ModelSerializer,),
+                          {'Meta': type('Meta', (), {'model': Knowledge, 'fields': '__all__'})})(instance).data]
 
         }
     )
