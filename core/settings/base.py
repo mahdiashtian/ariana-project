@@ -37,6 +37,7 @@ INTERNAL_APPS = [
 
 EXTERNAL_APPS = [
     'rest_framework',
+    'django_filters'
 ]
 
 HIGHLEVEL_APPS = [
@@ -148,6 +149,7 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.SessionAuthentication",  # For debug
     ],
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     'PAGE_SIZE': 11,
 }
