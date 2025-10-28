@@ -192,3 +192,10 @@ LOGGING = {
         },
     }
 }
+
+# Spectacular
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Ariana',
+    'DESCRIPTION': 'Management knowledge',
+    'VERSION': '1.0.0',
+}
