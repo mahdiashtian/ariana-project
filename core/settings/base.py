@@ -203,3 +203,6 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Management knowledge',
     'VERSION': '1.0.0',
 }
+
+
+OPENAI_API_KEY = config('OPENAI_API_KEY')
