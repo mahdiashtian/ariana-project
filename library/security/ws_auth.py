@@ -44,12 +44,12 @@ class JWTAuthMiddleware(BaseMiddleware):
         # Try to get token from Authorization header
         headers = dict(scope.get('headers', []))
 
-        if b'authorization' in headers:
+        if bytes('authorization','utf-8') in headers:
             try:
+
                 auth_header = headers[b'authorization'].decode()
                 token_type, token = auth_header.split(maxsplit=1)
-
-                if token_type.lower() == 'bearer':
+                if token_type.lower() == 'jwt':
                     return token.strip()
             except (ValueError, UnicodeDecodeError) as e:
                 logger.warning(f"Invalid authorization header format: {e}")
