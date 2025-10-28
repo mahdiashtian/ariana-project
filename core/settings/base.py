@@ -43,7 +43,8 @@ EXTERNAL_APPS = [
 ]
 
 HIGHLEVEL_APPS = [
-
+    "daphne",
+    "channels",
 ]
 
 INSTALLED_APPS = [
@@ -85,7 +86,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+ASGI_APPLICATION = 'core.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -217,3 +218,13 @@ CELERY_BROKER_URL = BROKER_URL
 
 # OpenAi
 OPENAI_API_KEY = config('OPENAI_API_KEY')
+
+# Channel Layer
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(config('CHANNEL_HOST'), config('CHANNEL_PORT'))],
+        },
+    },
+}
