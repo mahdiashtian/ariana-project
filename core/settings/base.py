@@ -33,7 +33,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v], d
 # Application definition
 
 INTERNAL_APPS = [
-    "accounts"
+    "accounts",
+    "content"
 ]
 
 EXTERNAL_APPS = [
