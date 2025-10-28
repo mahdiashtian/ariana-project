@@ -10,5 +10,5 @@ class ReadMeSerializer(ModelSerializer):
         fields = [
             "id", "username", "first_name", "last_name",
             "email", "role",
-             "date_joined", "last_login", "code",
+             "date_joined", "last_login",
         ]
