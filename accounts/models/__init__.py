@@ -1,2 +1,2 @@
-from .knowledge import *
 from .users import *
+from .knowledge import *

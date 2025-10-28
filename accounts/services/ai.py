@@ -12,7 +12,7 @@ class AIService(metaclass=SingletonMeta):
         try:
             response = self.client.responses.create(
                 model="gpt-4o",
-                instructions="write hello",
+                instructions="Summarize the following text",
                 input=text,
             )
             return response.output_text
