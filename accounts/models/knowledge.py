@@ -5,7 +5,7 @@ class Knowledge(models.Model):
     text = models.TextField(
 
     )
-    summary = models.TextField(blank=True, null=True)
+    summary = models.TextField(blank=True, null=True, editable=False)
 
     _skip_summary_update = False
 
