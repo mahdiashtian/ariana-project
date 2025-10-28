@@ -3,6 +3,25 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Idea file
+.idea
+
+# Django
+*.log
+*.logs
+*.pot
+*.pyc
+db.sqlite3
+media/
+static_cdn/
+.env
+.env.*
+.envrc
+
+# Migrations
+**/migrations/
+!**/migrations/__init__.py
+
 # C extensions
 *.so
 
